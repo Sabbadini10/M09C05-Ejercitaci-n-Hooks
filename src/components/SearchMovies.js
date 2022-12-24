@@ -1,7 +1,5 @@
 import React from 'react';
 
-import noPoster from '../assets/images/no-poster.jpg';
-
 function SearchMovies(){
 
 	const movies = [
@@ -23,15 +21,15 @@ function SearchMovies(){
 	const apiKey = 'X'; // Intenta poner cualquier cosa antes para probar
 
 	return(
-		<div className="container-fluid">
+		<div className="container-fluid d-flex col-12">
 			{
 				apiKey !== '' ?
 				<>
-					<div className="row my-4">
+					<div className="d=flex row my-4">
 						<div className="col-12 col-md-6">
 							{/* Buscador */}
 							<form method="GET">
-								<div className="form-group">
+								<div className="form-group ">
 									<label htmlFor="">Buscar por título:</label>
 									<input type="text" className="form-control" />
 								</div>
@@ -58,7 +56,7 @@ function SearchMovies(){
 														className="img-fluid px-3 px-sm-4 mt-3 mb-4" 
 														src={movie.Poster}
 														alt={movie.Title} 
-														style={{ width: '90%', height: '400px', objectFit: 'cover' }} 
+														style={{ width: '90%', height: '200px'}} 
 													/>
 												</div>
 												<p>{movie.Year}</p>
